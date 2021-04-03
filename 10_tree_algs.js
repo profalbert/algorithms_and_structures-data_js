@@ -44,7 +44,6 @@ let count = 0
 
 // Рекурсивный обход дерева n-размерности
 const recursive = (tree) => {
-  if (!tree.length) return 0
   let sum = 0
 
   tree.forEach((node) => {
@@ -58,12 +57,12 @@ const recursive = (tree) => {
 
 count = 0
 console.log(recursive(tree))
+console.log(recursive([]))
 console.log('count of operations = ', count)
 
 // Итеративный обход дерева n-размерности
 const iteration = (tree) => {
   count = 0
-  if (!tree.length) return 0
   let sum = 0
   const stack = tree
 
@@ -79,4 +78,5 @@ const iteration = (tree) => {
 
 console.log('--------------------------')
 console.log(iteration(tree))
+console.log(iteration([]))
 console.log('count of operations = ', count)
